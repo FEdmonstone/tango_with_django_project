@@ -11,10 +11,12 @@
         <div> hey there partner! </div>
         
         <div>
-            {% if categories%}
+            {% if categories %}
             <ul>
                 {% for category in categories %}
-                    <li>{{ category.name }}</li>
+                    <li>
+                    <a href ="rango/category/{{ category.slug }}">{{ category.name }}</a>
+                    </li>
                 {% endfor %}
             </ul>
             {% else %}
